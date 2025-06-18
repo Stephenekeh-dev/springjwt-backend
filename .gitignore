@@ -66,5 +66,16 @@ application.yml
 jacoco.exec
 coverage/
 
-/JwtKeyGerator
+
+
+# Ignore compiled output
+
+# Ignore IntelliJ project files
+.idea/
+
+
+# Ignore JWT key file
+**/JwtKeyGerator
+
+
 
