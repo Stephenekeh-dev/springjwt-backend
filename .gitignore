@@ -75,7 +75,15 @@ coverage/
 
 
 # Ignore JWT key file
-**/JwtKeyGerator
+**/JwtKeyGenerator.java
+
+
+
+# Ignore Docker-related files
+Dockerfile
+.dockerignore
+docker-compose.yml
+
 
 
 
