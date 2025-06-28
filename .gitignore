@@ -83,7 +83,9 @@ coverage/
 Dockerfile
 .dockerignore
 docker-compose.yml
+.env
 
 
 
 
+.env

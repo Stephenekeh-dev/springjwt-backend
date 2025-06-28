@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import static io.jsonwebtoken.Jwts.*;
+
 
 @Service
 public class JwtService {
@@ -52,8 +54,7 @@ public class JwtService {
     }
 
     private Claims extractAllClaims(String token) {
-        return Jwts
-                .parser()
+        return parser()
                 .verifyWith(getKey())
                 .build()
                 .parseSignedClaims(token)
@@ -64,7 +65,7 @@ public class JwtService {
     public String generateToken(User user) {
         Map<String, Object> claims = new HashMap<>();
 
-        return Jwts.builder()
+        return builder()
                 .claims()
                 .add(claims)
                 .subject(user.getUsername())
